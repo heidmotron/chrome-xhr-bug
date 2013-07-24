@@ -1,0 +1,11 @@
+For the ruby:
+gem install thin
+thin start -r server.ru -p 8001
+
+For the go:
+go run server.go
+
+For js node:
+node server.js
+
+

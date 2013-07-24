@@ -1,0 +1,18 @@
+<html>
+  <body>
+	<script>
+		var i = 0;
+		var id = setInterval(function() {
+			var xhr = new XMLHttpRequest()
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState === 4 && xhr.statusCode == 0) {
+					console.log('fail')
+				}
+			}
+			xhr.open('GET', '/a.json?i=' + i++)
+			xhr.send()
+			console.log(i)
+		}, 500)
+	</script>
+  </body>
+</html>
